@@ -19,6 +19,14 @@ A: They allow for multiline strings and do require less quoting of internal quot
 
 * Functions like list and range are built in global functions [documented here](https://docs.python.org/3/library/functions.html)
 
+### Documentation
+
+When doing Google searches, filtering to the official documentation is essential. Append this to queries:
+
+site:https://docs.python.org/
+
+Python has reached the point in the hype cycle where there is advertising revenue for creating sub-par content which needs to be filtered out.
+
 ### Culture
 
 See `import this`. "There should be one-- and preferably only one --obvious way to do it." Opposite of Perl's there is more than one way to do it.
