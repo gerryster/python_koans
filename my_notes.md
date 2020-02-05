@@ -1,6 +1,6 @@
 # Ryan's Python Notes and Questions
 
-Use `sniffer` to automatically run the tests.
+Use `sniffer` in the python3 directory to automatically run the tests.
 
 ## Questions
 
