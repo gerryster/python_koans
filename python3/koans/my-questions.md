@@ -12,3 +12,5 @@ A: They allow for multiline strings and do require less quoting of internal quot
 
 * https://github.com/hhatto/autopep8 is used for auto code formatting (at least according to VS Code's plugin recommendations).
   * https://github.com/ruby-formatter/rufo seems to be a similar Ruby idea.
+
+* There is an "is" operator to test for type equality: `None is None`
