@@ -32,3 +32,20 @@ Python has reached the point in the hype cycle where there is advertising revenu
 ### Culture
 
 See `import this`. "There should be one-- and preferably only one --obvious way to do it." Opposite of Perl's there is more than one way to do it.
+
+# Basic Types
+
+Null is referred to as "None"
+
+True and False are capitalized.
+
+### Regular Expressions
+
+Provided by the [re|https://docs.python.org/3/library/re.html] module. Regular expression literals are defined using the "r" operator which avoids backslashitus. So, matching 'a', followed by whitespace, followed by 'b', would be accomplished with:
+
+```python
+import re
+re.search(r'a\s+b', 'a  b')
+```
+
+The "r" strings are referred to as "raw strings" can can be used anywhere, even outside of Regular expressions. They are similar to single quoted strings in Ruby.
