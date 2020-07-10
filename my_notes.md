@@ -49,3 +49,12 @@ re.search(r'a\s+b', 'a  b')
 ```
 
 The "r" strings are referred to as "raw strings" can can be used anywhere, even outside of Regular expressions. They are similar to single quoted strings in Ruby.
+
+### Methods
+
+* Access control (private methods) are not a thing.
+  * Underscore prefixes are used.
+  * Double underscore renames the method with the class name. However, this is done to avoid subclass collisions instead of access control.
+* Methods which doe not take a self parameter are global.
+* Varargs is supported with a star before the argument like in Ruby.
+* Default parameter values are a thing.
