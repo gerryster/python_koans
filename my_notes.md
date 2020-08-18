@@ -58,3 +58,14 @@ The "r" strings are referred to as "raw strings" can can be used anywhere, even 
 * Methods which doe not take a self parameter are global.
 * Varargs is supported with a star before the argument like in Ruby.
 * Default parameter values are a thing.
+
+### Truthy and Falsey
+
+#### Falsey
+
+* `None`
+* 0
+* The empty string.
+* Empty collections.
+
+Everything else is truthy.
