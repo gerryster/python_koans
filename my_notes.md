@@ -33,11 +33,19 @@ Python has reached the point in the hype cycle where there is advertising revenu
 
 See `import this`. "There should be one-- and preferably only one --obvious way to do it." Opposite of Perl's there is more than one way to do it.
 
-# Basic Types
+### Basic Types
 
 Null is referred to as "None"
 
 True and False are capitalized.
+
+The `type` global function can be used to determine a value's type. The __class__ object property is very similar as in `value.__class__`.
+
+https://docs.python.org/3.8/library/stdtypes.html is helpful.
+
+### Operators
+
+* Operators and how they map to overloadable functions: https://docs.python.org/3.8/library/operator.html
 
 ### Regular Expressions
 
@@ -69,3 +77,15 @@ The "r" strings are referred to as "raw strings" can can be used anywhere, even 
 * Empty collections.
 
 Everything else is truthy.
+
+### Data Structures
+* square brackets for lists
+* curley brackets for sets
+* The set and dict classes are defined as lowercase "set" and "dict":
+
+```
+<class 'set'>
+>>> set
+<class 'set'>
+>>> dict
+```
