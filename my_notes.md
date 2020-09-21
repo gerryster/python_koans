@@ -89,3 +89,9 @@ Everything else is truthy.
 <class 'set'>
 >>> dict
 ```
+
+### Control flow
+
+* [if/else statements](https://docs.python.org/3/tutorial/controlflow.html)
+  * "elif" for else if
+  * colon after the conditional
