@@ -12,11 +12,11 @@ A: They allow for multiline strings and do require less quoting of internal quot
 
 Q: Where is the "mro" class documented fon RuntimeError?
 
-A: MRO stands for "method resolution order." This is important in cases of inheritence. Note the Python supports multiple inheritence. It is somewhat [documented here](https://docs.python.org/3/reference/datamodel.html#resolving-mro-entries). Methods appear to be resolved using a right to left depth first search according to [this blog post](http://www.srikanthtechnologies.com/blog/python/mro.aspx#:~:text=Method%20Resolution%20Order%20(MRO)%20is,lets%20examine%20a%20few%20cases.).
+A: MRO stands for "method resolution order." This is important in cases of inheritence. Note the Python supports multiple inheritence. It is somewhat [documented here](https://docs.python.org/3/reference/datamodel.html#resolving-mro-entries). Methods appear to be resolved using a right to left depth first search according to [this blog post](http://www.srikanthtechnologies.com/blog/python/mro.aspx#:~:text=Method%20Resolution%20Order%20(MRO)%20is,lets%20examine%20a%20few%20cases.). I /think/ it is defined on class "type".
 
-Q: How you you list out all of the methods of a class or object.
+Q: How you you list out all of the methods of a class or object?
 
-A: Use the `dir` global method such as: `dir(object())`.
+A: Use the [`dir` global function](https://docs.python.org/3/library/functions.html#dir) such as: `dir(object())`.
 
 ## Notes
 
@@ -103,3 +103,7 @@ Everything else is truthy.
 * [if/else statements](https://docs.python.org/3/tutorial/controlflow.html)
   * "elif" for else if
   * colon after the conditional
+
+### Language Comparison
+
+[Ruby and Python](https://grschafer.com/guides/2013/08/20/ruby-and-python-by-example/)
