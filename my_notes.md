@@ -10,6 +10,14 @@ Q: What is with the triple quoted strings?
 
 A: They allow for multiline strings and do require less quoting of internal quotes.
 
+Q: Where is the "mro" class documented fon RuntimeError?
+
+A: MRO stands for "method resolution order." This is important in cases of inheritence. Note the Python supports multiple inheritence. It is somewhat [documented here](https://docs.python.org/3/reference/datamodel.html#resolving-mro-entries). Methods appear to be resolved using a right to left depth first search according to [this blog post](http://www.srikanthtechnologies.com/blog/python/mro.aspx#:~:text=Method%20Resolution%20Order%20(MRO)%20is,lets%20examine%20a%20few%20cases.).
+
+Q: How you you list out all of the methods of a class or object.
+
+A: Use the `dir` global method such as: `dir(object())`.
+
 ## Notes
 
 * https://github.com/hhatto/autopep8 is used for auto code formatting (at least according to VS Code's plugin recommendations).
