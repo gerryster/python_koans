@@ -32,9 +32,42 @@ from runner.koan import *
 #
 # Your goal is to write the score method.
 
+import functools
+
+def count_by_value(accum,item):
+    if item in accum:
+        accum[item] += 1
+    else:
+        accum[item] = 1
+    return accum
+
 def score(dice):
-    # You need to write this method
-    pass
+    score = 0
+    # count_by_roll = functools.reduce(count_by_value, dice, {})
+    count_by_roll = {}
+
+    #for roll, count in count_by_roll.items():
+    # TODO: this seems like a hack. Hopefully there is a better way.
+    for roll in dice:
+        if roll in count_by_roll:
+            count_by_roll[roll] += 1
+        else:
+            count_by_roll[roll] = 1
+
+        if roll == 5:
+            score += 50
+        elif roll == 1:
+            score += 100
+
+        if count_by_roll[roll] == 3:
+            if roll == 5:
+                score += roll * 10 * 7
+            elif roll == 1:
+                score += 100 * 7
+            else:
+                score += roll * 100
+
+    return score
 
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
