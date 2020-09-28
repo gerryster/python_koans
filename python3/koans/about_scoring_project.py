@@ -34,38 +34,32 @@ from runner.koan import *
 
 import functools
 
-def count_by_value(accum,item):
-    if item in accum:
-        accum[item] += 1
-    else:
-        accum[item] = 1
+def partition_tripple(accum,item):
+    accum['others'].append(item)
+
+    this_item_in_other = [value for value in accum['others'] if value == item]
+    if len(this_item_in_other) == 3:
+        accum['tripple'] = item
+        accum['others'] = [value for value in accum['others'] if value != item]
+
     return accum
 
 def score(dice):
     score = 0
-    # count_by_roll = functools.reduce(count_by_value, dice, {})
-    count_by_roll = {}
+    partitioned_rolls = functools.reduce(partition_tripple, dice, {'others': []})
 
-    #for roll, count in count_by_roll.items():
-    # TODO: this seems like a hack. Hopefully there is a better way.
-    for roll in dice:
-        if roll in count_by_roll:
-            count_by_roll[roll] += 1
-        else:
-            count_by_roll[roll] = 1
+    if 'tripple' in partitioned_rolls:
+      tripple = partitioned_rolls['tripple']
+      if tripple == 1:
+          score += 1000
+      else:
+          score += tripple * 100
 
+    for roll in partitioned_rolls['others']:
         if roll == 5:
             score += 50
         elif roll == 1:
             score += 100
-
-        if count_by_roll[roll] == 3:
-            if roll == 5:
-                score += roll * 10 * 7
-            elif roll == 1:
-                score += 100 * 7
-            else:
-                score += roll * 100
 
     return score
 
