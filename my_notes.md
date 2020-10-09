@@ -107,3 +107,7 @@ Everything else is truthy.
 ### Language Comparison
 
 [Ruby and Python](https://grschafer.com/guides/2013/08/20/ruby-and-python-by-example/)
+
+### Common Iteration Funcitons
+
+These are available in the "[Functional Programming Modules](https://docs.python.org/3/library/functional.html)."

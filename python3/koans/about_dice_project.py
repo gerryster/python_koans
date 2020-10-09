@@ -16,7 +16,7 @@ class DiceSet:
     def roll(self, n):
         # Needs implementing!
         # Tip: random.randint(min, max) can be used to generate random numbers
-        pass
+        self._values = [random.randint(1, 6) for _ in range(n)]
 
 class AboutDiceProject(Koan):
     def test_can_create_a_dice_set(self):
@@ -56,6 +56,16 @@ class AboutDiceProject(Koan):
         # If the rolls are random, then it is possible (although not
         # likely) that two consecutive rolls are equal.  What would be a
         # better way to test this?
+
+        # My thoughts: comopare the identities of the two lists or use a new
+        # pseudorandom seed. It would also be possible to update the test to
+        # run for a set number of iterations until a new set of dice are found.
+        # The "is" operator could also be used to compare object identity of
+        # the list. However, this kind of feels like cheating as the values
+        # could be identical.
+        #
+        # Another option would be to increase the number of rolls to reduce the
+        # probability of duplicates.
 
     def test_you_can_roll_different_numbers_of_dice(self):
         dice = DiceSet()
