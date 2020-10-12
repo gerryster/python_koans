@@ -111,3 +111,7 @@ Everything else is truthy.
 ### Common Iteration Funcitons
 
 These are available in the "[Functional Programming Modules](https://docs.python.org/3/library/functional.html)."
+
+### Object Oriented Programming
+
+There is a ["descriptor" protocal](https://docs.python.org/3/howto/descriptor.html) which defines how properties are handled. "about_method_bindings.py" scratches the surface on this.
