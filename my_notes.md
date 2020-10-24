@@ -115,3 +115,7 @@ These are available in the "[Functional Programming Modules](https://docs.python
 ### Object Oriented Programming
 
 There is a ["descriptor" protocal](https://docs.python.org/3/howto/descriptor.html) which defines how properties are handled. "about_method_bindings.py" scratches the surface on this.
+
+### Variable Scope
+
+There is an explicit `global` keyword. Variable closure does not happen by default. In order to close over a variable in an outside scope, the variable needs to be declared using the `nonlocal` keyword.
