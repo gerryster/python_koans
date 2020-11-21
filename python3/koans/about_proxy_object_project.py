@@ -21,21 +21,18 @@ from runner.koan import *
 class Proxy:
     def __init__(self, target_object):
         # WRITE CODE HERE
+        self._messages = []
 
         #initialize '_obj' attribute last. Trust me on this!
         self._obj = target_object
-        self._messages = []
 
     # WRITE CODE HERE
-    def __getattrribute__(self, attr_name):
-        self._messages.append(attr_name)
-        return self._obj.__getattrribute__(attr_name)
-
     def __getattr__(self, attr_name):
         self._messages.append(attr_name)
         return getattr(self._obj, attr_name)
 
     def __setattr__(self, attr_name, value):
+        # Ovoid infinite recursion:
         if attr_name.startswith('_'):
             object.__setattr__(self, attr_name, value)
         else:
@@ -49,12 +46,7 @@ class Proxy:
         return message in self._messages
 
     def number_of_times_called(self, message):
-        times_called = 0
-        for called_message in self._messages:
-            if message == called_message:
-                times_called = times_called + 1
-
-        return times_called
+        return len([i for i,called in enumerate(self._messages) if message == called])
 
 # The proxy object should pass the following Koan:
 #
